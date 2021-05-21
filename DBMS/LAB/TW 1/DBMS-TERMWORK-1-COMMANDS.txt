@@ -1,0 +1,86 @@
+DBMS: 1-LAB TERM WORK
+
+Steps in table creation:
+
+1.create table team till coach name
+
+create table teams
+(
+team_id int,
+team_name varchar(10),
+city varchar(10),
+coach_name varchar(10),
+primary key(team_id)
+);
+
+insert into teams values(&team_id,'&team_name','&city','&coach_name');
+
+2.create table players with all attributes
+
+create table players
+(
+pid int,
+p_name varchar(10),
+position varchar(10),
+skill varchar(10),
+dob date,
+team_id int,
+primary key(pid),
+foreign key(team_id) references teams(team_id)
+);
+
+insert into players values(&pid,'&p_name','&position','&skill','&dob',&team_id);
+
+3. create table injury
+
+create table injury
+(
+inj_name varchar(10),
+pid int,
+I_date date,
+physician varchar(10),
+inj_type varchar(10),
+primary key(inj_name,pid),
+foreign key (pid) references players(pid)
+);
+
+insert into injury values('&inj_name',&pid,'&i_date','&physician','&inj_type');
+
+4. create table games
+
+create table games
+(
+tid1 int,
+tid2 int,
+score varchar(5),
+guest int,
+g_date date,
+venue varchar(10),
+primary key(tid1,tid2,guest),
+foreign key(tid1) references teams(team_id),
+foreign key(tid2) references teams(team_id),
+foreign key(guest) references teams(team_id)
+);
+
+insert into games values(&tid1,&tid2,'&score',&guest,'&g_date','&venue');
+
+5. add captain_id attribute to teams table
+
+alter table teams
+add captain_id int;
+
+6. Now insert NULL values for captain_id
+
+ UPDATE TEAMS 
+ SET CAPTAIN_ID=NULL;
+
+7. Now make captain_id as foreign key in teams table
+
+alter table teams
+add foreign key (captain_id) references players(pid);
+
+8. Now assign captain_id the value in teams table
+
+update teams
+set captain_id=101
+where team_id=1;
