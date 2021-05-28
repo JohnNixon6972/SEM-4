@@ -49,17 +49,24 @@ def search_books_by_price():
     with open("books.csv", "r", newline="") as file:
         flag = 0
         reader = csv.reader(file)
-        price = input("Enter the price of the book to be searched :: ")
-        if int(price) > 0:
-            for rows in reader:
-                if rows[3] == price:
-                    flag = 1
-                    print("Book Number :: " + rows[0] + "\tBook Title :: " +
-                          rows[1] + "\tBook Author :: " + rows[2] + "\tPrice :: " + rows[3])
-            if flag == 0:
-                print("Books for given price value is not present!!")
-        else:
-            print("Price cannot be <=0 !!")
+
+        try:
+            price = input("Enter the price of the book to be searched :: ")
+            if int(price) > 0:
+
+                for rows in reader:
+                    if rows[3] == price:
+                        flag = 1
+                        print("Book Number :: " + rows[0] + "\tBook Title :: " +
+                              rows[1] + "\tBook Author :: " + rows[2] + "\tPrice :: " + rows[3])
+                if flag == 0:
+                    print("Books for given price value is not present!!")
+            else:
+                raise ValueError("Invalid price!!")
+
+        except Exception as error:
+            print(type(error), error)
+
     print()
 
 
