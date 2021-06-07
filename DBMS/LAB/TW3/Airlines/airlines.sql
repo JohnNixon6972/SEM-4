@@ -1,4 +1,6 @@
+create database airline;
 use airline;
+
 CREATE TABLE FLIGHTS(
 flight_no integer,
 fromPlace varchar(20),
