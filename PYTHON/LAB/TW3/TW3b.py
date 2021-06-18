@@ -1,9 +1,15 @@
 # Write a Python program to read from a file input.txt and write the contents
 # in reverse order to file output.txt, raise an exception if there is no content
 # in input.txt.
+import os as os
+
 
 def execute():
     try:
+        fileSize = os.stat("input.txt").st_size
+        if fileSize <= 0:
+            raise FileNotFoundError("")
+
         with open("input.txt", "r") as input_file:
             contents = input_file.read()
             with open("output.txt", "w") as output_file:
@@ -13,7 +19,7 @@ def execute():
                     output_file.write(words+" ")
 
     except FileNotFoundError:
-        print("File Not found!!")
+        print(FileNotFoundError)
 
 
 def main():

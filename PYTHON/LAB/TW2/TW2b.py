@@ -6,7 +6,6 @@
 # a. Find the course Name that has highest number of registrations
 # b. Given the course code, display the associated details
 # c. Display details of all the courses
-courses = {'coursecode': {'faculty': "xyz"}}
 
 
 def Store_informations(courses):

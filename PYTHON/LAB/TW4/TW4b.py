@@ -73,7 +73,7 @@ def main():  # main function
 
     print()
 
-    print("Created Trinagle Object ")
+    print("Created Rectangle Object ")
     rect_obj = Rectangle()  # creating object for class "Rectangle"
     rect_obj.compute_area()  # calling their respective methods
     rect_obj.Display()
