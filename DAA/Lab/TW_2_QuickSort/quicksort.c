@@ -61,8 +61,8 @@ int main(int argc, char *argv[])
    for(i = 0; i < MAX_ELEMENTS; i++ ){
 	   list[i] = rand();
    }
-   printf("The list before sorting is:\n");
-   printlist(list,MAX_ELEMENTS);
+   // printf("The list before sorting is:\n");
+   // printlist(list,MAX_ELEMENTS);
    t1=time(&t1);
    // sort the list using quicksort
    for(i=0;i<MAX_ELEMENTS;i++)
@@ -71,8 +71,8 @@ int main(int argc, char *argv[])
    t2=time(&t2);
    
    // print the result
-   printf("The list after sorting using quicksort algorithm:\n");
-   printlist(list,MAX_ELEMENTS);
+   // printf("The list after sorting using quicksort algorithm:\n");
+   // printlist(list,MAX_ELEMENTS);
    printf("time taken:%f\n",(float)(t2-t1)/CLOCKS_PER_SEC); 
 
   

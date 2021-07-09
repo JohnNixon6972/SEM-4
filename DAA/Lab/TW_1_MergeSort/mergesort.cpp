@@ -5,7 +5,7 @@
 #include <stdlib.h>
 using namespace std;
 
-#define MAX 100000
+#define MAX 2000
 void getdata(int array[])
 {
     int i;

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include<stdlib.h>
 #include<time.h>
-#define MAX 1500
+#define MAX 10000
 void getdata(int arr[])
 {
  int i;
