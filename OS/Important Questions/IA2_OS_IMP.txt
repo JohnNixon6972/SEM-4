@@ -1,0 +1,38 @@
+OS IMPORTANT QUESTIONS FOR IA2
+
+THIRD UNIT:
+
+Process Synchronization->
+1) What is critical Section Problem ? Explain the requirements of the same(IA/SEE).
+2) Explain Peterson's Solution for critical section Problem with algorithm(IA/SEE)
+3) Explain Semaphore implementation to solve critical section problem(IA/SEE)
+4) Classical Problems of Synchronization:
+	a) Bounded Buffer Problem(Generally asked in SEE)
+	b) Reader-Writer Problem(Generally asked in SEE)
+	c) Dining philosophers Problem with structure(Most Important for IA/SEE)
+
+
+Deadlocks->
+1) Deadlock Characterisation(Generally asked in SEE)
+2) Resource allocation Graph
+3) Methods for handling deadlocks-> There are 3 methods(Asked for 10M in SEE)
+4) Bankers Algorithm (Imp for both IA/SEE)
+	a) If asked in IA just solve problem
+	b) If asked in SEE explaination + problem
+
+
+FOURTH UNIT:
+
+Main Memory->
+1) Explain Process Of swapping(Compulsory Question for IA/SEE)
+2) Multiple partition Allocation Best fit,First fit & worst fit (Not imp for IA but most imp For SEE)
+3) What is Paging? Explain Paging Hardware with TLB with diagram(IA/SEE)
+
+
+Virtual Memory ->
+1) Page Replacement Algorithms(IMP for IA/SEE)
+2) Explain demand paging(Generally asked for 3-4 Marks in SEE)
+3) What is Page Fault?What are steps to handle Page Fault.Explain with diagram(Compulsory Question for    IA/SEE)
+4) Problems on FIFO or Optimal or LRU algorithms
+   NO theory will be asked regarding the algorithms.
+
